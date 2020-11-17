@@ -2,6 +2,7 @@
 
 require_once 'KironPartnerAPIClient.php';
 
+// Replace the example token  XjsX5BdnE2bOlzS709aZ6cBE9uhkyhKyLLffrbb9UMQwYC9skb with your own token
 $client = new KironPartnerAPIClient('XjsX5BdnE2bOlzS709aZ6cBE9uhkyhKyLLffrbb9UMQwYC9skb', 'LOCAL');
 var_dump($client->createOrUpdateCourse(200, [
     'denomination' => 'Test Course',
