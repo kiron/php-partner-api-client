@@ -21,7 +21,7 @@ class KironPartnerAPIClient
         $this->_currentEnv = $env;
     }
 
-    public function createOrUpdateCourse($id, $attributes)
+    public function createOrUpdateCourse(int $id, array $attributes)
     {
         return $this->_request('course/' . $id, 'PUT', $attributes);
     }
@@ -44,7 +44,7 @@ class KironPartnerAPIClient
         throw new Error('Could not retrieve courses. HTTP Status:' . $result['code'] . ' Response: ' . $result['response']);
     }
 
-    public function getCourse($id)
+    public function getCourse(int $id)
     {
         $result = $this->_request('course/' . $id, 'GET');
         if ($result['code'] === 200) {
@@ -53,7 +53,7 @@ class KironPartnerAPIClient
         throw new Error('Could not retrieve course with id: ' . $id . ' HTTP Status:' . $result['code'] . ' Response: ' . $result['response']);
     }
 
-    public function deleteCourse($id)
+    public function deleteCourse(int $id)
     {
         return $this->_request('course/' . $id, 'DELETE');
     }
