@@ -26,6 +26,15 @@ class KironPartnerAPIClient
         return $this->_request('course/' . $id, 'PUT', $attributes);
     }
 
+    public function getSections()
+    {
+        $result = $this->_request('section/', 'GET');
+        if ($result['code'] === 200) {
+            return json_decode($result['response']);
+        }
+        throw new Error('Could not retrieve sections. HTTP Status:' . $result['code'] . ' Response: ' . $result['response']);
+    }
+
     public function getCourses()
     {
         $result = $this->_request('course/', 'GET');

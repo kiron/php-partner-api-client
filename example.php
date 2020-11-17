@@ -11,6 +11,8 @@ var_dump($client->createOrUpdateCourse(200, [
     'startDateSemesterTwo' => '2020-12-10',
     'endDateSemesterTwo' => '2021-02-04',
 ]));
+
+var_dump($client->getSections());
 var_dump($client->getCourses());
 var_dump($client->getCourse(200));
 var_dump($client->deleteCourse(200));
