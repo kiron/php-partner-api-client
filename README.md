@@ -6,9 +6,13 @@ Simple client for the Kiron Partner API to manage courses
 
 ## Getting a valid token for authentification
 
-A token for the test system can be created here: [https://uat-internal.kiron.ngo/backend/kiron/organization/partnerapitokens](https://uat-internal.kiron.ngo/backend/kiron/organization/partnerapitokens)
+A token for the **test system** can be created here: 
 
-A token for the production system can be created here: [https://internal.kiron.ngo/backend/kiron/organization/partnerapitokens](https://internal.kiron.ngo/backend/kiron/organization/partnerapitokens) 
+[https://uat-internal.kiron.ngo/backend/kiron/organization/partnerapitokens](https://uat-internal.kiron.ngo/backend/kiron/organization/partnerapitokens)
+
+A token for the **production system** can be created here: 
+
+[https://internal.kiron.ngo/backend/kiron/organization/partnerapitokens](https://internal.kiron.ngo/backend/kiron/organization/partnerapitokens) 
 
 ## Example code
 
