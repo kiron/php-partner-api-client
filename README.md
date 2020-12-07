@@ -22,7 +22,7 @@ A token for the **production system** can be created here:
 require_once 'KironPartnerAPIClient.php'; // Require class
 
 $client = new KironPartnerAPIClient('tokenfrombackend', 'UAT'); // Init client
-$client->createOrUpdateCourse(200, [
+$client->createOrUpdateCourse('200', [
     'denomination' => 'Test Course',
     'ects' => 5,
     'link' => 'http://example.com/course',
@@ -33,8 +33,8 @@ $client->createOrUpdateCourse(200, [
 
 $client->getSections(); // Returns array of all sections
 $client->getCourses(); // Returns array of all courses
-$client->getCourse(200); // Returns coruse with id 200
-$client->deleteCourse(200); // Deletes course with id 200
+$client->getCourse('200'); // Returns coruse with id 200
+$client->deleteCourse('200'); // Deletes course with id 200
 ```
 
 ## Methods
@@ -50,7 +50,7 @@ $client->deleteCourse(200); // Deletes course with id 200
 
 **Returns** client object
 
-### `public function createOrUpdateCourse(int $id, array $attributes)`
+### `public function createOrUpdateCourse(string $id, array $attributes)`
 
 **Params:**
 
@@ -82,7 +82,7 @@ $client->deleteCourse(200); // Deletes course with id 200
 
 **Throws an Exception when list cannot be found retrieved!**
 
-### `public function getCourse(int $id)`
+### `public function getCourse(string $id)`
 **Params:**
 
  - `$id` id of the course in the partner system (also called "externalId")
@@ -91,7 +91,7 @@ $client->deleteCourse(200); // Deletes course with id 200
 
 **Throws an Exception when course cannot be found!**
 
-### `public function deleteCourse(int $id)`
+### `public function deleteCourse(string $id)`
 
 **Params:**
 
