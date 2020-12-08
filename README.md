@@ -134,6 +134,7 @@ $client->deleteCourse('200'); // Deletes course with id 200
 | [shortDescription](#shortdescription)           | `string`  | Optional  |
 | [longDescription](#longdescription)             | `string`  | Optional  |
 | [imageUrl](#imageurl)                           | `string`  | Optional  |
+| [status](#imageurl)                           | `string`  | Optional  |
 
 *Note that not all start and end dates are optional at the same time. At least one set of start and end dates must be provided for the first or second semester
 
@@ -603,3 +604,28 @@ URL of an image for the course.
 ### imageUrl Constraints
 
 **URI**: the string must be a URI, according to [RFC 3986](https://tools.ietf.org/html/rfc3986 'check the specification')
+
+
+## status
+
+Status of this course.
+
+`status`
+
+- is optional
+- Type: `string`
+- cannot be null
+
+### status Type
+
+`string`
+
+### status Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value            | Explanation |
+| :--------------- | ----------- |
+| `"new"` |     Course not yet published on campus        |
+| `"ready"` |    Course visible on campus         |
+| `"old"`     |        Only visible to students who are enrolled in the course      |
